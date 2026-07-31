@@ -361,6 +361,9 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
  font-weight: 500;
   /* margin: 17px 0; */
 }
+.hide,.tools{
+  display: none;
+}
 .zoom{
   display: none;
   position: fixed;
@@ -368,32 +371,71 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
   justify-content: center;
   align-items: center;
   z-index: 8;
-  background-color: #3531528f;
+  background-color: #353152;
 }
-.zoom button{
-  position: fixed;
-  top: 1em;
-  right: 30px;
-  font-size: 40px;
-  padding: 10px;
+.zoom button {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 45px;
   background: none;
-  border: var(--panel-border);
+  border: none;
+  color: var(--base-deep);
   cursor: pointer;
-  color: #000;
 }
 .zoom button:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: scale(1.05);
 }
-.zoom img{
+.zoom img {
+  width: 70%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 16px;
   margin: 20px;
-  padding: 20px;
-  max-width: 90%;
-  max-height: 90%;
-  background-color: var(--base-soft);
-  border-radius: 20px;
 }
 
+.zoom-content{
+    display: flex;
+    gap: clamp(20px, 4vw, 50px);
+    width: min(90%, 1200px);
+    padding: clamp(20px, 3vw, 40px);
+    border-radius: 20px;
+}
+
+.zoom-info{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(12px, 2vw, 24px);
+}
+
+.zoom-title{
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--ivory);
+}
+
+.zoom-desc{
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    line-height: 1.8;
+    color: var(--slate-light);
+}
+
+.zoom-tool{
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    line-height: 1.7;
+    color: var(--ivory-muted);
+}
+
+.zoom-info .zoom-tool h5{
+  color: var(--ivory);
+}
+.zoom-info .zoom-tool li{
+  list-style: none;
+}
 /* about*/
 #about{
   text-align: center;
@@ -522,6 +564,41 @@ font-size: 13px; font-weight: 600;
   .footer-links { flex-wrap: wrap; justify-content: center; }
   .footer-ctas { flex-direction: column; align-items: center; }
   .mobile-menu-inner { padding: 90px 20px 40px; }
+
+
+    .zoom-content{
+        flex-direction: column;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .zoom-content img{
+        max-height: 45vh;
+    }
+
+    .zoom-info{
+        width: 100%;
+    }
+
+    .zoom-title{
+        font-size: 1.8rem;
+    }
+
+    .zoom-desc{
+        font-size: 0.95rem;
+    }
+
+    .zoom-tool{
+        font-size: 0.9rem;
+    }
+
+    .close-btn{
+        font-size: 2rem;
+        top: 12px;
+        right: 16px;
+    }
+
 }
 
 @media (max-width: 480px) {
