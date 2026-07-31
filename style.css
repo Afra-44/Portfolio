@@ -388,7 +388,7 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
   transform: scale(1.05);
 }
 .zoom img {
-  width: 70%;
+  /* width: 70%; */
   max-height: 80vh;
   object-fit: contain;
   border-radius: 16px;
@@ -408,6 +408,7 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: auto;
     gap: clamp(12px, 2vw, 24px);
 }
 
@@ -574,7 +575,7 @@ font-size: 13px; font-weight: 600;
     }
 
     .zoom-content img{
-        max-height: 45vh;
+        max-height: 100%;
     }
 
     .zoom-info{
