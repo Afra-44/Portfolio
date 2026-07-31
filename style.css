@@ -392,14 +392,14 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
   max-height: 80vh;
   object-fit: contain;
   border-radius: 16px;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .zoom-content{
     display: flex;
     gap: clamp(20px, 4vw, 50px);
     width: min(90%, 1200px);
-    padding: clamp(20px, 3vw, 40px);
+    /* padding: clamp(20px, 3vw, 40px); */
     border-radius: 20px;
 }
 
