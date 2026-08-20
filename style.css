@@ -440,8 +440,11 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
 /* about*/
 #about{
   text-align: center;
-}
 
+}
+.about-text strong{
+  color: #C9CDD4;
+}
 /* Service  */
 .service{
   padding-top: 50px;
