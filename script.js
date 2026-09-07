@@ -105,36 +105,36 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu();
 window.addEventListener('resize', () => { if (innerWidth > 1024) closeMenu(); });
 
 
-pic = document.querySelectorAll(".design-pic")
+// pic = document.querySelectorAll(".design-pic")
 
-pic.forEach( (pic) => {
-  pic.addEventListener( 'click', () => {
-    console.log("clicked")
-    zoom = document.querySelector(".zoom")
+// pic.forEach( (pic) => {
+//   pic.addEventListener( 'click', () => {
+//     console.log("clicked")
+//     zoom = document.querySelector(".zoom")
 
-    const item = pic.closest(".design-item")
-    console.log(item)
-    const desc = item.querySelector(".hide")?.textContent || ""
-    zoom.style.display = "flex"
-    document.body.style.overflow = "hidden";
-    const imgSrc = pic.querySelector("img").src;
+//     const item = pic.closest(".design-item")
+//     console.log(item)
+//     const desc = item.querySelector(".hide")?.textContent || ""
+//     zoom.style.display = "flex"
+//     document.body.style.overflow = "hidden";
+//     const imgSrc = pic.querySelector("img").src;
 
-    document.querySelector(".zoom img").src =
-    item.querySelector("img").src;
+//     document.querySelector(".zoom img").src =
+//     item.querySelector("img").src;
 
-    document.querySelector(".zoom-title").textContent =
-        item.querySelector(".design-name").textContent;
+//     document.querySelector(".zoom-title").textContent =
+//         item.querySelector(".design-name").textContent;
 
-    document.querySelector(".zoom-desc").textContent =
-        item.querySelector(".hide").textContent;
+//     document.querySelector(".zoom-desc").textContent =
+//         item.querySelector(".hide").textContent;
 
-    document.querySelector(".zoom-tool").innerHTML =
-        item.querySelector(".tools").innerHTML;
+//     document.querySelector(".zoom-tool").innerHTML =
+//         item.querySelector(".tools").innerHTML;
     
-    document.querySelector(".close-btn").addEventListener("click", () => {
-      console.log("cancel")
-      zoom.style.display = "none";
-      document.body.style.overflow = "";
-    })
-  })
-})
+//     document.querySelector(".close-btn").addEventListener("click", () => {
+//       console.log("cancel")
+//       zoom.style.display = "none";
+//       document.body.style.overflow = "";
+//     })
+//   })
+// })
