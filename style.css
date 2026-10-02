@@ -172,7 +172,7 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
 /* ── Container ── */
 .main { position: relative; z-index: 2; max-width: 1120px; margin: 0 auto; padding: 0 40px; }
 
-.section { padding: 80px 0; position: relative; }
+.section { padding: 120px 0; position: relative; }
 .section-title {
   font-size: clamp(2rem, 4vw, 3rem); font-weight: 300;
   text-align: center; 
@@ -275,6 +275,17 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
 
 
 /* ══════════════════════════════════
+   problem 
+   ══════════════════════════════════ */
+
+.bold-title{
+  color: #B0B8C4;
+  font-style:oblique;
+  font-weight: 800;
+  font-size: 3rem;
+}   
+
+/* ══════════════════════════════════
    project 
    ══════════════════════════════════ */
 .project {
@@ -361,135 +372,79 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
  font-weight: 500;
   /* margin: 17px 0; */
 }
-.hide,.tools{
-  display: none;
-}
-.zoom{
-  display: none;
-  position: fixed;
-  inset: 0;
-  justify-content: center;
-  align-items: center;
-  z-index: 8;
-  background-color: #353152;
-}
-.zoom button {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  font-size: 45px;
-  background: none;
-  border: none;
-  color: var(--base-deep);
-  cursor: pointer;
-}
-.zoom button:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: scale(1.05);
-}
-.zoom img {
-  /* width: 70%; */
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 16px;
-  /* margin: 20px; */
-}
-
-.zoom-content{
-    display: flex;
-    gap: clamp(20px, 4vw, 50px);
-    width: min(90%, 1200px);
-    /* padding: clamp(20px, 3vw, 40px); */
-    border-radius: 20px;
-}
-
-.zoom-info{
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    gap: clamp(12px, 2vw, 24px);
-}
-
-.zoom-title{
-    font-size: clamp(1.5rem, 3vw, 3rem);
-    font-weight: 700;
-    line-height: 1.15;
-    color: var(--ivory);
-}
-
-.zoom-desc{
-    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-    line-height: 1.8;
-    color: var(--slate-light);
-}
-
-.zoom-tool{
-    font-size: clamp(0.85rem, 1vw, 1rem);
-    line-height: 1.7;
-    color: var(--ivory-muted);
-}
-
-.zoom-info .zoom-tool h5{
-  color: var(--ivory);
-}
-.zoom-info .zoom-tool li{
-  list-style: none;
-}
 /* about*/
 #about{
-  text-align: center;
-
+  text-align: left;
 }
-.about-text strong{
-  color: #C9CDD4;
+
+.about-text{
+  font-size: 1.3rem; font-weight: 400; line-height: 2; 
+  color: var(--slate-light);  
+   margin: auto;
 }
 /* Service  */
 .service{
   padding-top: 50px;
 }
 .services-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 56px;
+  display: flex; flex-direction: column;  gap: 16px; margin-top: 56px;
 }
-.service-item {
-   border: 1px solid var(--panel-border);
-  border-radius: 20px; padding: 24px 16px; text-align: left;
-  backdrop-filter: blur(16px);
+.service-item { text-align: left;
+  max-width: 600px;
+}
+.main-service-item{
+  max-width: 900px;
+}
+.offer-list{
+  display: flex; 
+  flex-direction: column;
+  gap: 16px;
+  padding: 5px 15px;
+}
+.offer-item{
+  border: 1px solid var(--panel-border);
+  border-radius: 20px; padding: 24px 16px;
+   backdrop-filter: blur(16px);
   transition: transform 0.8s var(--silk-ease), border-color 0.8s var(--silk-ease);
 }
-.service-item:hover{
+.offer-item:hover{
   transform: scale(1.02);
   border: 1px solid var(--panel-border-hover);
 }
 .service-name {
   font-size: 1rem; font-weight: 700; letter-spacing: 0.05em;
-  color: var(--ivory); text-transform: uppercase;
+  color: var(--ivory-muted); text-transform: uppercase; margin-bottom: 1.5rem;
 }
-.service-text{
+.offer-text{
   font-size: 1rem; font-weight: 300; 
-  color: var(--slate-light); margin: 8px 0;
+  color: var(--slate-light); margin: 8px 15px;
 }
 .skill{
-  margin: 20px 0;
-  align-items: center;
+ display: grid;
+  grid-template-columns: 1fr 1fr 1fr;   /* heading | set 1 | set 2 */
+  gap: 1.5rem 3rem;
+  align-items: start;
+}
+.skill h3{
+  color: #B0B8C4;
+  font-size: 1.2rem;
 }
 .skill-set{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 6px;
-  margin: 5px auto;
+  padding: 5px 15px;
   /* max-width: 700px; */
   text-align: center;
-  
+  border-left: var(--panel-border) 1px solid ;
 }
 .skill-set .skill-name{
-  background: var(--panel-bg); border: 1px solid var(--panel-border);
-  border-radius: 70px;  text-align: center;
+   border: 1px solid var(--panel-border);
+  border-radius: 70px;  text-align: left;
   backdrop-filter: blur(16px);
   width: fit-content ;
   padding: 10px 8px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     /* letter-spacing: .5px; */
   transition: transform 0.8s var(--silk-ease), border-color 0.8s var(--silk-ease);
 }
@@ -514,16 +469,17 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
    FOOTER
    ══════════════════════════════════ */
 .footer { padding: 10px 20px; 
-  text-align: center; }
+  text-align: center;
+box-shadow:  0px -12px 12px -12px #E5E7EB; }
 .footer-bar {
   display: flex;
   justify-content: space-around;
    align-items: center;
   padding-top: 40px; border-top: 1px solid rgba(156,163,175,0.06);
 }
-.footer-brand { font-size: 11px; font-weight: 600; 
+.footer-brand { font-size: 14px; font-weight: 600; 
   letter-spacing: 0.2em; text-transform: uppercase; 
-  color: var(--slate-light); opacity: 0.5; }
+  color: var(--ivory); opacity: 0.8; }
 
 .footer .links a{
 text-decoration: none;
@@ -568,41 +524,12 @@ font-size: 13px; font-weight: 600;
   .footer-links { flex-wrap: wrap; justify-content: center; }
   .footer-ctas { flex-direction: column; align-items: center; }
   .mobile-menu-inner { padding: 90px 20px 40px; }
-
-
-    .zoom-content{
-        flex-direction: column;
-        width: 90%;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-
-    .zoom-content img{
-        max-height: 100%;
-    }
-
-    .zoom-info{
-        width: 100%;
-    }
-
-    .zoom-title{
-        font-size: 1.8rem;
-    }
-
-    .zoom-desc{
-        font-size: 0.95rem;
-    }
-
-    .zoom-tool{
-        font-size: 0.9rem;
-    }
-
-    .close-btn{
-        font-size: 2rem;
-        top: 12px;
-        right: 16px;
-    }
-
+  .skill {
+    grid-template-columns: 1fr 1fr;
+  }
+  .skill h3 {
+    grid-column: 1 / -1;   /* spans the full row */
+  }
 }
 
 @media (max-width: 480px) {
