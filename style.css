@@ -174,9 +174,9 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
 
 .section { padding: 120px 0; position: relative; }
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem); font-weight: 300;
+  font-size: 1rem; font-weight: 300;
   text-align: center; 
-  letter-spacing: -0.04em; line-height: 1.15; color: var(--ivory); margin-bottom: 20px;
+  letter-spacing: 0.1em; line-height: 1.15; color: var(--ivory-muted); margin-bottom: 20px;
 }
 .section-title strong { font-weight: 600; }
 
@@ -278,11 +278,17 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
    problem 
    ══════════════════════════════════ */
 
+#problem{
+  max-width: 900px;
+}   
 .bold-title{
   color: #B0B8C4;
   font-style:oblique;
-  font-weight: 800;
-  font-size: 3rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.5;
+
+  /* letter-spacing: 1px; */
 }   
 
 /* ══════════════════════════════════
@@ -299,7 +305,7 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
 .project-type{
   letter-spacing: 3px;
   font-size: 1.5rem;
-  text-align: center;
+  text-align: start;
   font-style: oblique;
   font-weight: 100;
   color: var(--ivory-muted);
@@ -375,6 +381,7 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
 /* about*/
 #about{
   text-align: left;
+  max-width: 900px;
 }
 
 .about-text{
@@ -450,6 +457,10 @@ body.menu-open .top-nav { background: rgba(21, 24, 31, 0.95); backdrop-filter: b
 }
 /* Contact  */
 
+#contact{
+  max-width: 800px;
+  margin: auto;
+}
 .contact-cta p{
   color: var(--ivory-muted);
   
@@ -530,11 +541,23 @@ font-size: 13px; font-weight: 600;
   .skill h3 {
     grid-column: 1 / -1;   /* spans the full row */
   }
+  .bold-title{
+    font-size: 1.8rem;
+  }
+  .offer-text, .about-text{
+    font-size: 1rem;
+  }
+  .skill-set .skill-name{
+    font-size: 0.8rem;
+  }
+  .offer-item h3{
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 480px) {
   .hero h1 { font-size: 2.4rem; }
-  .section-title { font-size: 1.7rem; }
+  
   .mobile-menu-link { font-size: 1.4rem; }
   
   .section-text{
